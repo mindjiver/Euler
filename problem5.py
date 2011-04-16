@@ -41,3 +41,7 @@ while(i < j):
     i = i + 1
 
 print all_divs
+
+# n = 20
+# for i = 0 until later
+# 

@@ -17,7 +17,7 @@ def square_sum(num):
 
     return prod
 
-num = 100
+num = 10000000
 
 s_sq = sum_squares(num)
 sq_s = square_sum(num)

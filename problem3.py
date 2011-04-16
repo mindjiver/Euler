@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-def mult(x, y): return x * y
+from operator import mul
 
 def find_divisors(composite):
     i = 1
@@ -40,4 +40,4 @@ for d in reversed(divisors):
     if len(factorize(d)) == 1:
         factors.append(d)
 
-print str(factors) + " are primes in " + str(reduce(mult, factors))
+print str(factors) + " are primes in " + str(reduce(mul, factors))

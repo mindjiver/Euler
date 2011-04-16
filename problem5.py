@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+from operator import mul
+
 #end = 10 #2520  
          # 1, 2, 3, 4,  5, 6,  7, 8,    9,   10
          # 1  2  3  2*2 5  3*2 7  2*2*2 3*3  2*5 => 1, 2, 3, 5, 7
@@ -14,8 +16,8 @@ end = 20
 
 divisors = range(1, end+1)
 
-j = reduce(lambda x,y: x*y, divisors)
-i = 87297210 # product of all primes in of reduce(lambda x,y: x*y, range(1, 20))
+j = reduce(mul, divisors)
+i = 87297210 # product of all primes in of reduce(mul, range(1, 20))
 all_divs = []
 
 while(i < j):

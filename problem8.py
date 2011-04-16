@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+from operator import mul
+
 n = ("73167176531330624919225119674426574742355349194934" + 
      "96983520312774506326239578318016984801869478851843" +
      "85861560789112949495459501737958331952853208805511" +
@@ -29,7 +31,7 @@ while(i < len(n)):
     # map ascii -> integer on list
     sub = map(int, sub)
     print sub
-    prod = reduce(lambda x,y: x*y, sub)
+    prod = reduce(mul, sub)
     if prod > max:
         max = prod
 

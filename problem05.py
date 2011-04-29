@@ -2,48 +2,50 @@
 
 from operator import mul
 
-#end = 10 #2520  
-         # 1, 2, 3, 4,  5, 6,  7, 8,    9,   10
-         # 1  2  3  2*2 5  3*2 7  2*2*2 3*3  2*5 => 1, 2, 3, 5, 7
+# 1 and all primes below n = 20 are neccessary
+primes = [2, 3, 5, 7, 11, 13, 17, 19]
+n = 20
+factors = set()
+proper = []
 
-#end = 11 #27720
-#end = 12 #27720
-#end = 13 #360360 = 13 * 27720
-#end = 14 #360360
-#end = 15 #360360
-#end = 16 #720720 = 360360
-end = 20
+def factorize(n):
+    """
+    Naive and slow factorization.
+    """
+    factors = [1]
 
-divisors = range(1, end+1)
+    if n == 1: return factors
 
-j = reduce(mul, divisors)
-i = 87297210 # product of all primes in of reduce(mul, range(1, 20))
-all_divs = []
+    for p in primes:
+        if n % p == 0:
+            factors.append(p)
 
-while(i < j):
+    prod = reduce(mul, factors)
 
-    print "\nchecking " + str(i) + ": ",
-    divs = 0
+    if n != prod:
+        factors.extend(factorize(n / prod))
 
-    for d in reversed(divisors):
-        if i % d == 0:
-            divs = divs + 1
+    factors.remove(1)
 
-    d = divs
-    while(d):
-        print "*",
-        d = d - 1
-    print " (" + str(divs) + ")",
+    return sorted(factors)
 
-    if divs == end:
-        print i
-        all_divs.append(i)
-        break
+# get all factors for all numbers up until n
+for i in range(1, n+1):
+    for f in factorize(i):
+        factors.add(f)
 
-    i = i + 1
+# find the largest exponent for each factor, really ugly
+for f in factors:
+    if f == 1:
+        continue
+    e = 2
+    s = f
+    while(s < n):
+        s = f**e
+        e += 1
 
-print all_divs
+    for i in range(0, e-2):
+        proper.append(f)
+    print str(f) + " => " + str(f) + "**" + str(e-2)
 
-# n = 20
-# for i = 0 until later
-# 
+print reduce(mul, proper)

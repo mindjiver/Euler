@@ -25,6 +25,6 @@ def sieve_primes(num):
 
 # 300 000 = 1min
 #n = 2000000
-n = 50000
+n = 5000
 p = sieve_primes(n)
 print sum(p)

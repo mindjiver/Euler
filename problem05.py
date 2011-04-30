@@ -10,22 +10,19 @@ proper = []
 
 def factorize(n):
     """
-    Naive and slow factorization.
+    Somewhat improved from problem 12 euler discussions.
     """
-    factors = [1]
+    factors = []
 
+    if n <= 0: return []
     if n == 1: return factors
 
-    for p in primes:
-        if n % p == 0:
-            factors.append(p)
-
-    prod = reduce(mul, factors)
-
-    if n != prod:
-        factors.extend(factorize(n / prod))
-
-    factors.remove(1)
+    while n > 1:
+        for p in primes:
+            if n % p == 0:
+                factors.append(p)
+                n = n / p 
+                break
 
     return sorted(factors)
 

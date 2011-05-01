@@ -2,7 +2,7 @@
 
 from math import factorial
 
-def permutations(n, k):
+def binom(n, k):
     #
     # n choose m = n! / k!(n-k)!
     #
@@ -16,4 +16,4 @@ def permutations(n, k):
 #
 # 
 n = 20
-print permutations(n*2, n)
+print binom(n*2, n)

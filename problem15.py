@@ -4,7 +4,7 @@ from math import factorial
 
 def binom(n, k):
     #
-    # n choose m = n! / k!(n-k)!
+    # n choose k = n! / k!(n-k)!
     #
     return factorial(n) / (factorial(k) * factorial(n - k))
     

@@ -19,5 +19,3 @@ even = [x for x in seq if x % 2 == 0]
 
 print even
 print sum(even)
-
-

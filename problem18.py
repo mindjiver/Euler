@@ -21,7 +21,7 @@ def graph_brute_force(node, path):
     (l, v, r) = (node.left, node.value, node.right)
 
     path = path + [v]
-    
+
     if l == None or r == None:
         return path
 

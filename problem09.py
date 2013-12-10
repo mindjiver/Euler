@@ -4,7 +4,7 @@
 import sys
 
 #naive solution:
-# 
+#
 # brute force find all tuples (a,b,c) for which a+b+c = 1000
 # brute-force triplet(a,b,c)
 #
@@ -37,7 +37,7 @@ for m in range(1, sum+1):
         a = (m * m) - (n * n)
         b = 2 * m * n
         c = (m * m) + (n * n)
-    
+
         t = (a,b,c)
 
         if(a+b+c == sum):

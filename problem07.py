@@ -9,7 +9,7 @@ def primes(num):
 
     while(i <= num):
         i += 1
-        
+
         # skip all odd numbers.
         if i != 2 and i % 2 == 0:
             continue
@@ -29,4 +29,3 @@ for p in primes(1000000):
     if i == 10001:
         sys.exit()
     i += 1
-    

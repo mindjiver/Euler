@@ -22,5 +22,5 @@ num = 10000000
 s_sq = sum_squares(num)
 sq_s = square_sum(num)
 
-print str(sq_s) + " - " + str(s_sq) + " = ", 
+print str(sq_s) + " - " + str(s_sq) + " = ",
 print sq_s - s_sq

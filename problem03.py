@@ -16,15 +16,15 @@ def find_divisors(composite):
     return factors
 
 def factorize(n):
-    
+
     i = 1
     factors = []
 
     while(i < n):
-        
+
         if (n % i)  == 0:
             factors.append(i)
-            
+
         i = i + 1
 
     return factors
@@ -36,7 +36,7 @@ divisors = find_divisors(composite)
 factors = []
 
 for d in reversed(divisors):
-    
+
     if len(factorize(d)) == 1:
         factors.append(d)
 

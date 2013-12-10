@@ -21,7 +21,7 @@ def factorize(n):
         for p in primes:
             if n % p == 0:
                 factors.append(p)
-                n = n / p 
+                n = n / p
                 break
 
     return sorted(factors)

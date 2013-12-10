@@ -5,7 +5,7 @@
 from itertools import permutations, islice
 
 # recipe from itertools library documentation.
-def take(n, iterable):    
+def take(n, iterable):
     "Return first n items of the iterable as a list"
     return list(islice(iterable, n))
 

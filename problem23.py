@@ -7,13 +7,21 @@
 def divisors(n):
 
     divs = []
+
+    if n == 1:
+        divs = [1]
+        print str(divs) + " divides " + str(n)
+        return divs
+
     for i in range(1, n):
         if n % i == 0:
             divs.append(i)
-            
+
+    print str(divs) + " divides " + str(n)
     return divs
 
-n  = 28123
+#n  = 28123
+n = 20
 
 abundant = []
 

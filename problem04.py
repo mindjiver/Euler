@@ -12,9 +12,8 @@ for x in r:
     for y in r:
         prod =  x * y
 
-        if isPalindrome(prod): 
+        if isPalindrome(prod):
             palindromes.append(prod)
 
 palindromes.sort()
 print palindromes[-1]
-    

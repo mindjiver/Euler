@@ -6,7 +6,7 @@ def divisors(n):
     for i in range(1, n):
         if n % i == 0:
             divs.append(i)
-            
+
     return divs
 
 div_sums = dict()

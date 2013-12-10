@@ -35,9 +35,9 @@ tens = {
 
 def num_to_string(n):
     # split n into parts:
-    # e.g. 
+    # e.g.
     # n = 1234
-    # => 
+    # =>
     # 1000 200 30 4
     th = n / 1000
     h = (n - (th * 1000)) / 100

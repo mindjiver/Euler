@@ -1,19 +1,11 @@
 #!/usr/bin/env python
 
-prev = 1
-elem = 2
-
+elem = 0
 seq = [1, 2]
 
-while(1):
-    tmp = elem
-    elem = elem + prev
-    prev = tmp
-
-    if elem < 4000000:
-        seq.append(elem)
-    else:
-        break
+while(elem < 4000000):
+    elem = seq[-1] + seq[-2]
+    seq.append(elem)
 
 even = [x for x in seq if x % 2 == 0]
 
